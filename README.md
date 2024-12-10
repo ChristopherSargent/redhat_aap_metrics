@@ -1,15 +1,11 @@
 ![alt text](rh_logo.png)
   
-#### This repository contains a compose file to deploy awx grafana and prometheus as a container stack for ansible automation platform.
-* 
+#### This repository contains scripts to deploy awx grafana and prometheus as a container stack for ansible automation platform via docker or podman.
+* [AAP metrics](https://developers.redhat.com/articles/2024/08/28/monitor-ansible-automation-platform-using-prometheus-node-exporter-and-grafana?source=sso#procedure)
+* [AWX prometheus and grafana](https://github.com/ansible/awx/blob/devel/tools/grafana/README.md)
 
 #### 
-sudo su
-dnf install -y podman-docker podman -y 
-systemctl enable podman
-systemctl start podman
-curl -SL https://github.com/docker/compose/releases/download/v2.28.1/docker-compose-linux-x86_64 -o /usr/sbin/docker-compose
-chmod +x /usr/sbin/docker-compose
+
 
 
 # 
