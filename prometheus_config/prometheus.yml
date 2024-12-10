@@ -1,0 +1,15 @@
+---
+global:
+  scrape_interval: 5s  # Set the scrape interval to something faster. Default is every 1 minute.
+
+scrape_configs:
+  - job_name: 'aap-controller'
+    metrics_path: /api/v2/metrics
+    scrape_interval: 5s
+    scheme: https
+    tls_config:
+      insecure_skip_verify: true
+    bearer_token: PV5nc5rboRBFhbp6sEFtoxDzMegsvJ
+    static_configs:
+    # AAP Endpoint
+    - targets: ['172.18.0.68']

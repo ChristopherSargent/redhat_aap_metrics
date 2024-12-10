@@ -1,0 +1,40 @@
+version: '2.1'
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: tools_prometheus_1
+    restart: always #Updating here Christopher Sargent 10092024
+    hostname: prometheus
+    networks:
+      - aap
+    ports:
+      - "9090:9090"
+    volumes:
+      - "./prometheus_config/prometheus.yml:/etc/prometheus/prometheus.yml"
+      - "./prometheus_storage:/prometheus:rw"
+  grafana:
+    image: grafana/grafana-enterprise:latest
+    container_name: tools_grafana_1
+    restart: always #Updating here Christopher Sargent 10092024
+    hostname: grafana
+    networks:
+      - aap
+    ports:
+      - "3001:3000"
+    volumes:
+      - "./grafana_config:/etc/grafana/provisioning"
+      - "./grafana_storage:/var/lib/grafana:rw"
+    depends_on:
+      - prometheus
+
+#volumes:
+#  prometheus_storage:
+#    name: tools_prometheus_storage
+#  grafana_storage:
+#    name: tools_grafana_storage
+
+networks:
+  aap:
+    name: aap
+  service-mesh:
+    name: service-mesh
