@@ -20,7 +20,7 @@ User Type  = System Auditor
 1. git clone project
 2. cd redhat_aap_metrics
 3. vim prometheus_config/prometheus.yml
-Update bearer token and target
+* Update bearer token and target
 ```
 ---
 global:
