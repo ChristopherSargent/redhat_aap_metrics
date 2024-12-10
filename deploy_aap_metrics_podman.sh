@@ -9,6 +9,10 @@ podman network create service-mesh
 echo "Setting up directories for volumes..."
 mkdir -p ./prometheus_config ./prometheus_storage ./grafana_config ./grafana_storage
 chmod -R 775 ./prometheus_storage ./grafana_storage
+chown -R 65534:65534 ./prometheus_storage
+chmod -R 775 ./prometheus_storage
+chown -R 472:472 ./grafana_storage
+chmod -R 755 ./grafana_storage
 
 # Deploy Prometheus
 echo "Deploying Prometheus..."
