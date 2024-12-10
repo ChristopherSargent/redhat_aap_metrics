@@ -44,6 +44,6 @@ podman ps
 
 # Reset Grafana admin
 echo "Reset Grafana admin"
-podman exec -it tools_grafana_1 grafana-cli admin reset-admin-password admin
+podman exec -it tools_grafana_1 grafana cli admin reset-admin-password admin
 
 
