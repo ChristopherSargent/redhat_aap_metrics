@@ -2,8 +2,8 @@
 
 # Destroy networks
 echo "Destroying Podman networks..."
-podman network rm aap
-podman network rm service-mesh
+podman network rm aap -f
+podman network rm service-mesh -f
 
 # Destroy tools_prometheus_1 and tools_grafana_1
 podman rm tools_prometheus_1 -f
