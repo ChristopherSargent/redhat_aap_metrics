@@ -20,6 +20,7 @@ User Type  = System Auditor
 1. git clone project
 2. cd redhat_aap_metrics
 3. vim prometheus_config/prometheus.yml
+Update bearer token and target
 ```
 ---
 global:
@@ -42,12 +43,14 @@ scrape_configs:
 
 ![Screenshot](resources/grafana1.png)
 
+![Screenshot](resources/grafana2.png)
+
 6. http://ip:3001 > admin admin > Dashboards > AAP > AAP Metrics
 
-![Screenshot](resources/zabbixhttps.JPG)
+![Screenshot](resources/grafana3.png)
 
+![Screenshot](resources/grafana4.png)
 
+![Screenshot](resources/grafana5.png)
 
-
-# 
 
