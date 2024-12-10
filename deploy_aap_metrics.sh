@@ -13,5 +13,5 @@ chown -R 65534:65534 ./prometheus_storage
 chmod -R 775 ./prometheus_storage
 
 # Bring up containers
-docker compose up -d
+docker compose -f aap-metrics-compose.yml up -d
 
