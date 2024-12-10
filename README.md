@@ -45,7 +45,7 @@ scrape_configs:
 
 ![Screenshot](resources/grafana2.png)
 
-6. http://ip:3001 > admin admin > Dashboards > AAP > AAP Metrics
+6. http://ip:3001 > admin > Dashboards > AAP > AAP Metrics
 
 ![Screenshot](resources/grafana3.png)
 
